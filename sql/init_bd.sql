@@ -60,9 +60,9 @@ CREATE TABLE `game_session` (
 
 DROP TABLE IF EXISTS `user_session`;
 CREATE TABLE `user_session` (
-	`id` 			INT NOT NULL AUTO_INCREMENT,
-	`user_id` 	 	INT NOT NULL AUTO_INCREMENT,
-	`session_id`	 	INT NOT NULL AUTO_INCREMENT,
+	`id` 			INT 	     NOT NULL AUTO_INCREMENT,
+	`user_id` 	 	INT          NOT NULL AUTO_INCREMENT,
+	`session_id`	 	INT          NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`)
 );
 
