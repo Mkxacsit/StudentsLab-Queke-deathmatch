@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./sequelizeDB');
 
-let usersRoles = sequelize.define(
+let userRole = sequelize.define(
     'locations',
     {
         id: {

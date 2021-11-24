@@ -1,7 +1,7 @@
 const { DataTypes }= require('sequelize');
 const sequelize = require('./sequelizeDB');
 
-let gameSessions = sequelize.define(
+let gameSession = sequelize.define(
     'game_sessions',
     {
         id: {

@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./sequelizeDB');
 
-let usersRoles = sequelize.define(
-    'users_roles',
+let user = sequelize.define(
+    'users',
     {
         id: {
             type: DataTypes.BIGINT.UNSIGNED,
@@ -11,21 +11,19 @@ let usersRoles = sequelize.define(
             unique: true,
             autoIncrement: true
         },
-        userId: {
-            type: DataTypes.BIGINT.UNSIGNED,
+        login: {
+            type: DataTypes.STRING(50),
             allowNull: false,
-            field: 'user_id'
+            unique: true
         },
-        roleId: {
-            type: DataTypes.BIGINT.UNSIGNED,
-            primaryKey: true,
-            allowNull: false,
-            field: 'role_id'
-        },      
+        password: {
+            type: DataTypes.STRING(50),
+            allowNull: false
+        }       
     },
     {
         timestamps: false
     }
 );
-
-module.exports = usersRoles;
+                    //note: password handling here
+module.exports = users;

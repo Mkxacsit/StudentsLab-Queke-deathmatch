@@ -1,7 +1,7 @@
 const { DataTypes }= require('sequelize');
 const sequelize = require('./sequelizeDB');
 
-let roles = sequelize.define(
+let role = sequelize.define(
     'roles',
     {
         id: {
